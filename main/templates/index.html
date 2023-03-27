@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'CSS/stile.css' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <div class="container">
+        <div class="header_inner">
+            <a href="">
+                Главная
+            </a>
+            <a href="">
+                Магазин
+            </a>
+            <a href="">
+                Корзина
+            </a>
+        </div>
+    </div>
+</header>
+    <div class="container">
+        <div class="card_inner">
+            <div class="card">        
+                <img width="100%" src="data:image/jpeg;base64,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" alt="">
+                <h3>Nike Air Jodan</h3>
+                <p>description</p>
+                <button>Добавить в корзину</button>
+            </div>
+            {% for i in nike %}
+            <div class="card">
+                <img src="{{ i.image.url }}" width="100%" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="">{{i.title}}</a></h5>
+                  <p class="card-text">{{i.price}} сом</p>
+                  <button>Добавить в корзину</button>
+                </div>
+              </div>  
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
