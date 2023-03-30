@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'CSS/stile.css' %}">
+</head>
+<body>
+      <header>  
+        <div class="container">
+            <div class="header_inner">
+      <a href="{% url 'home' %}">Домой</a>
+    </div>
+</div>   
+    </header>
+      <div class="container">
+        <div class="card_inner">
+    
+      {% for i in nike %}
+            <div class="card">
+                <img src="{{ i.image.url }}" width="100%" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><a style="text-decoration: none; color: black;" href="{% url 'detal' i.id %}">{{i.title}}</a></h5>
+                  <p class="card-text">{{i.price}} сом</p>
+                  <button>Добавить в корзину</button>
+                </div>
+              </div>  
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
