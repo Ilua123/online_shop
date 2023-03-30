@@ -54,3 +54,9 @@ def carzines(request, id):
      nike = Nike.objects.all()
      context = {'nike':nike}
      return render(request, 'index.html', context)
+
+def about_us(request):
+     return render(request, 'about_us.html')
+
+def auth(request):
+     return render(request, 'auth.html')

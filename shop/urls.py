@@ -28,6 +28,8 @@ urlpatterns = [
     path('favorit_delet/<int:id>', delet_favorites, name='favorit_delet'),
     path('carzina/', carzina, name='carzina'),
     path('carzines/<int:id>', carzines, name='carzines'),
+    path('about_us/', about_us, name='about_us'),
+    path('auth/', auth, name='auth'),
 ]
 
 
