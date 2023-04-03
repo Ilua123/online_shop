@@ -57,6 +57,3 @@ def carzines(request, id):
 
 def about_us(request):
      return render(request, 'about_us.html')
-
-def auth(request):
-     return render(request, 'auth.html')

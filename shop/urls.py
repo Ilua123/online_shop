@@ -18,6 +18,7 @@ from django.urls import path
 from main.views import *
 from shop.settings import MEDIA_ROOT,MEDIA_URL
 from django.conf.urls.static import static
+from user.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,7 +30,8 @@ urlpatterns = [
     path('carzina/', carzina, name='carzina'),
     path('carzines/<int:id>', carzines, name='carzines'),
     path('about_us/', about_us, name='about_us'),
-    path('auth/', auth, name='auth'),
+    path('register/', Sign_in, name='sing_in'),
+    path('sing_up/', Sign_up, name='sing_up'),
 ]
 
 
