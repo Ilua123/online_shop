@@ -30,8 +30,9 @@ urlpatterns = [
     path('carzina/', carzina, name='carzina'),
     path('carzines/<int:id>', carzines, name='carzines'),
     path('about_us/', about_us, name='about_us'),
-    path('register/', Sign_in, name='sing_in'),
-    path('sing_up/', Sign_up, name='sing_up'),
+    path('register/', sign_in, name='sing_in'),
+    path('sing_up/', sign_up, name='sing_up'),
+    path('logout/', logout, name='logout'),
 ]
 
 

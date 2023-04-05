@@ -27,43 +27,16 @@
             <a href="{% url 'about_us' %}">
                 О нас
             </a>
-            {% if not user.is_authenticated %}
             <a href="{% url 'sing_in' %}">
                 Регистрация
             </a>
             <a href="{% url 'sing_up' %}">
                 Sing_up
             </a>
-            {% else %}
-            <a href="">
-                {{user.username}}
-            </a>
-            <a href="{% url 'logout' %}">
-                Logout
-            </a>
-            {% endif %}
         </div>
     </div>
 </header>
-
-    <!-- <div class="container">
-        <div class="card_left">
-            {% for i in nike %}
-            <div class="product_row">
-                <img src="{{ i.image.url }}" width="100%" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"><a style="text-decoration: none; color: black;" href="{% url 'detal' i.id %}">{{i.title}}</a></h5>
-                  <p class="card-text">{{i.price}} сом</p>
-                  <button><a style="text-decoration: none; color: white;" href="{% url 'carzines' i.id %}"  type="button">Добавить в корзину</a></button>
-                </div>
-              </div>  
-            {% endfor %}
-        </div>
-    </div> -->
     <div class="container">
-        {% for i in messages %}
-            <h1 >{{i}}</h1>
-        {% endfor %}
         <div class="cart">
         <div class="cart_left">
             {% for i in nike %}
@@ -77,11 +50,7 @@
               </div>  
             {% endfor %}
         </div>
-        <div class="cart_right">
-            <p>Итоговая цена{}</p>
-            <p>Количество товаров{}</p>
-            <a href="">Офформить заказ</a>
-        </div>
+        <div class="cart_right"></div>
     </div>
     </div>
 </body>
