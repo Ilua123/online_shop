@@ -1,36 +1,66 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'CSS/stile.css' %}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'CSS/stile.css' %}">
 </head>
 <body>
-      <header>  
-        <div class="container">
-            <div class="header_inner">
-      <a href="{% url 'home' %}">Домой</a>
+    <header>
+    <div class="container">
+        <div class="header_inner">
+            <a href="">
+                Главная
+            </a>
+            <a href="">
+                Магазин
+            </a>
+            <a href="{% url 'carzina' %}">
+                Корзина
+            </a>
+            <a href="{% url 'favorit' %}">
+                Избранные
+            </a>
+            <a href="{% url 'about_us' %}">
+                О нас
+            </a>
+            <a href="{% url 'sing_in' %}">
+                Регистрация
+            </a>
+            <a href="{% url 'sing_up' %}">
+                Sing_up
+            </a>
+        </div>
     </div>
-</div>   
-    </header>
-      <div class="container">
-        <div class="card_inner">
-    
-      {% for i in nike %}
-            <div class="card">
+</header>
+{% if amount > 0 %}
+    <div class="container">
+        
+        <div class="cart">
+        <div class="cart_left">
+            {% for i in nike %}
+            <div class="product_row">
                 <img src="{{ i.image.url }}" width="100%" alt="...">
                 <div class="card-body">
                   <h5 class="card-title"><a style="text-decoration: none; color: black;" href="{% url 'detal' i.id %}">{{i.title}}</a></h5>
                   <p class="card-text">{{i.price}} сом</p>
-                  <button>Добавить в корзину</button>
+                  <button><a style="text-decoration: none; color: white;" href="{% url 'carzines' i.id %}"  type="button">Добавить в корзину</a></button>
                 </div>
               </div>  
             {% endfor %}
         </div>
+        <div class="cart_right">
+            <p>Итоговая цена{{total_price}}</p>
+            <p>Количество товаров{{amount}}</p>
+            <a href="{% url 'order' %}">Офформить заказ</a>
+        </div>
     </div>
+</div>
+     {% else %}
+     <h1>Здесь ничего нет</h1>
+     {% endif %}
 </body>
 </html>

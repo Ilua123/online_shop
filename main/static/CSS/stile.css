@@ -96,6 +96,8 @@ header{
 
 .product_row{
     width: 100%;
+    display: flex;
+    gap: 10px;
 }
 
 .product_row img{
@@ -103,3 +105,16 @@ header{
     height: 250px;
     object-fit: cover;
 }
+
+.product_row div {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart_left{
+    gap: 40px;
+}
+

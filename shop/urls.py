@@ -33,6 +33,7 @@ urlpatterns = [
     path('register/', sign_in, name='sing_in'),
     path('sing_up/', sign_up, name='sing_up'),
     path('logout/', logout, name='logout'),
+    path('order/', order, name='order'),
 ]
 
 
